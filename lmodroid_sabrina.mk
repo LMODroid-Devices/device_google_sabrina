@@ -11,7 +11,7 @@ PRODUCT_IS_ATV := true
 $(call inherit-product, device/google/atv/products/atv_base.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+$(call inherit-product, vendor/lmodroid/config/common_full_tv.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -22,7 +22,7 @@ PRODUCT_DEVICE := sabrina
 PRODUCT_GMS_CLIENTID_BASE := android-google-tv
 PRODUCT_MANUFACTURER := Google
 PRODUCT_MODEL := Chromecast
-PRODUCT_NAME := lineage_sabrina
+PRODUCT_NAME := lmodroid_sabrina
 
 PRODUCT_SYSTEM_NAME := sabrina_prod_stable
 PRODUCT_SYSTEM_DEVICE := sabrina_prod_stable
