@@ -23,14 +23,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/Vendor_0001_Product_0001.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0001_Product_0001.kl
 
-## Platform
-TARGET_AMLOGIC_SOC := sm1
+## Netflix
+PRODUCT_PACKAGES += \
+    NetflixConfig \
+    SabrinaNetflixConfigOverlay
 
 ## Wi-Fi firmware
 include kernel/amlogic/kernel-modules/dhd-driver/firmware/wifi/wifi.mk
 
 ## Inherit from the common tree product makefile
-$(call inherit-product, device/amlogic/g12-common/g12.mk)
+$(call inherit-product, device/amlogic/sm1-common/sm1.mk)
 
 ## Inherit from the proprietary files makefile
 $(call inherit-product, vendor/google/sabrina/sabrina-vendor.mk)
